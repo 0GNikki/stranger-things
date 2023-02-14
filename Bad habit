@@ -1,0 +1,28 @@
+#Bad habit
+#by Nikki Davis
+use_bpm 100
+use_synth :b
+live_loop :bad_habit do
+  play :Ab
+  sleep 0.5
+  play :C
+  sleep 0.5
+  play :Db
+  sleep 0.5
+  play :Eb
+  sleep 0.5
+  play :C
+  sleep 0.5
+  play :G
+  sleep 0.6
+  play :Ab
+  sleep 0.5
+  play :F
+  sleep 0.5
+  play :C
+  sleep 0.5
+  play :Db
+  sleep 0.5
+  play :Eb
+  sleep 2.2
+end
