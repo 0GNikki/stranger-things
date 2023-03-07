@@ -1,0 +1,22 @@
+#challenge F
+num = 21
+min = 88
+
+
+88.times do
+  play num
+  sleep 0.25
+  num = num + 1
+end
+
+88.times do
+  play min
+  sleep 0.25
+  min = min - 1
+end
+
+88.times do
+  play num
+  sleep 0.125
+  num = num + 1
+end
