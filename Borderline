@@ -1,0 +1,71 @@
+#Borderline (remix)
+use_bpm 110
+use_synth :piano
+power ="C:/Users/Nicollette Davis/Desktop/Y2Mate.is - I Am Power - Chainsawpower (loud).wav"
+
+
+define :drums do
+  play :D
+  sleep 1
+end
+
+define :drums_2 do
+  play :C
+  sleep 1
+end
+
+define :drums_3 do
+  play :E
+  sleep 1
+end
+
+notes= [:c2,:f4,:g4,:d4,:f4,:g4,:f4,:g4,:d4,:f4,:g4,:d4,:d4,:f4,:g4,:f4,:g4,:c5,:d5]
+i = 0
+stops = [0.5,0.5,1,0.5,0.5,1,0.5,1,0.5,0.5,1,2.5,0.5,0.5,0.5,0.5,0.5,0.5,4]
+x = 0
+
+
+#############################################
+
+sample power
+
+
+live_loop :main do
+  19.times do
+    play notes[i]
+    i = i + 1
+    sleep stops[x]
+    x= x+ 1
+  end
+  i=0
+  x=0
+end
+
+live_loop :d1 do
+  drums
+end
+
+live_loop :d2 do
+  sleep 0.5
+  drums_2
+end
+
+live_loop :d3 do
+  sleep 0.5
+  drums_3
+end
+
+live_loop :bum do
+  sleep 3
+  play :c2
+end
+
+live_loop :bum_bum do
+  sleep 3.5
+  play :d2
+  sleep 0.5
+  play :e3
+  sleep 0.5
+  play :c4
+  sleep 0.5
+end
